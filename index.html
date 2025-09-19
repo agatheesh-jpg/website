@@ -1,120 +1,299 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>To-Do List</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f4f6f9;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
-
-    .container {
-      background: #fff;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      width: 350px;
-      text-align: center;
-    }
-
-    h2 {
-      margin-bottom: 20px;
-      color: #333;
-    }
-
-    input {
-      padding: 10px;
-      width: 70%;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-    }
-
-    button {
-      padding: 10px;
-      border: none;
-      background: #007bff;
-      color: white;
-      border-radius: 8px;
-      cursor: pointer;
-      margin-left: 5px;
-    }
-
-    button:hover {
-      background: #0056b3;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-      margin-top: 20px;
-    }
-
-    li {
-      background: #f1f1f1;
-      padding: 10px;
-      margin: 5px 0;
-      border-radius: 8px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    li.completed {
-      text-decoration: line-through;
-      color: gray;
-    }
-
-    .delete {
-      background: red;
-      color: white;
-      border: none;
-      padding: 5px 8px;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-
-    .delete:hover {
-      background: darkred;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGATHEESH C - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-  <div class="container">
-    <h2>✅ To-Do List</h2>
-    <input type="text" id="taskInput" placeholder="Enter a task...">
-    <button onclick="addTask()">Add</button>
-    <ul id="taskList"></ul>
-  </div>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">AGATHEESH C</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#projects" class="nav-link">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#achievements" class="nav-link">Achievements</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
 
-  <script>
-    const input = document.getElementById("taskInput");
-    const list = document.getElementById("taskList");
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">AGATHEESH C</h1>
+                <h2 class="hero-subtitle">Student of Computer Science AIML</h2>
+                <p class="hero-description">I am a passionate programming student pursuing Computer Science AIML with a focus on software development, web technologies, and problem-solving. I love creating projects that solve real-world problems and am always eager to learn new technologies.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn--primary">View Projects</a>
+                    <a href="#contact" class="btn btn--outline">Contact Me</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    function addTask() {
-      if (input.value.trim() === "") return;
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Get to know more about my background and skills</p>
+            </div>
+            <div class="about-content">
+                <div class="about-info">
+                    <div class="about-card">
+                        <h3>Background</h3>
+                        <p>I am a passionate programming student pursuing Computer Science with a focus on software development, web technologies, and problem-solving. I love creating projects that solve real-world problems and am always eager to learn new technologies.</p>
+                    </div>
+                    <div class="about-card">
+                        <h3>Education</h3>
+                        <p><strong>Bachelor of Technology in Computer Science AIML</strong></p>
+                        <p>CHRIST (Deemed to be University)</p>
+                    </div>
+                </div>
+                <div class="skills-section">
+                    <h3>Technical Skills</h3>
+                    <div class="skills-grid">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">HTML/CSS</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Git/GitHub</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Data Structures & Algorithms</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      let li = document.createElement("li");
-      li.innerHTML = `
-        <span onclick="toggleTask(this)">${input.value}</span>
-        <button class="delete" onclick="removeTask(this)">X</button>
-      `;
-      list.appendChild(li);
-      input.value = "";
-    }
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Here are some of my recent projects that showcase my skills</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">Weather Dashboard</h3>
+                        <p class="project-description">A responsive web application that displays current weather and 5-day forecast using OpenWeatherMap API. Features include location search, temperature unit conversion, and interactive weather maps.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">HTML/CSS</span>
+                            <span class="tech-tag">REST API</span>
+                            <span class="tech-tag">Chart.js</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/yourusername/weather-dashboard" class="btn btn--secondary" target="_blank">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                            <a href="https://yourusername.github.io/weather-dashboard" class="btn btn--primary" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
-    function toggleTask(task) {
-      task.parentElement.classList.toggle("completed");
-    }
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">Task Management System</h3>
+                        <p class="project-description">A full-stack web application for managing personal tasks and projects. Features include user authentication, task categorization, deadline tracking, and progress visualization.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Express.js</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/yourusername/task-manager" class="btn btn--secondary" target="_blank">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                            <a href="https://task-manager-demo.herokuapp.com" class="btn btn--primary" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
-    function removeTask(btn) {
-      btn.parentElement.remove();
-    }
-  </script>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">Algorithm Visualizer</h3>
+                        <p class="project-description">An interactive web application that visualizes popular sorting and searching algorithms. Helps students understand how different algorithms work through step-by-step animations.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">D3.js</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/yourusername/algorithm-visualizer" class="btn btn--secondary" target="_blank">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                            <a href="https://algorithm-viz.herokuapp.com" class="btn btn--primary" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">Student Grade Calculator</h3>
+                        <p class="project-description">A desktop application built with Python and tkinter for calculating and tracking student grades. Features include GPA calculation, grade distribution charts, and export functionality.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Tkinter</span>
+                            <span class="tech-tag">Pandas</span>
+                            <span class="tech-tag">Matplotlib</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/yourusername/grade-calculator" class="btn btn--secondary" target="_blank">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="achievements">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Achievements</h2>
+                <p class="section-subtitle">Some of my notable accomplishments</p>
+            </div>
+            <div class="achievements-grid">
+                <div class="achievement-item">
+                    <div class="achievement-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Dean's List for Academic Excellence</h3>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3>Winner of University Hackathon 2024</h3>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-icon">
+                        <i class="fas fa-code-branch"></i>
+                    </div>
+                    <h3>Contributor to Open Source Projects</h3>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Completed 100+ LeetCode Problems</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Feel free to reach out for opportunities or just to say hello!</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Connect</h3>
+                    <p>I'm always open to discussing new opportunities, collaborating on projects, or answering any questions you might have.</p>
+                    <div class="contact-links">
+                        <a href="mailto:your.email@example.com" class="contact-link">
+                            <i class="fas fa-envelope"></i>
+                            <span>agatheesh.c@btech.christuniverstiy.in</span>
+                        </a>
+                        <a href="https://github.com/yourusername" class="contact-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://linkedin.com/in/yourusername" class="contact-link" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" id="name" name="name" class="form-control" required>
+                        <span class="error-message" id="name-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+                        <span class="error-message" id="email-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
+                        <span class="error-message" id="message-error"></span>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full-width">Send Message</button>
+                    <div class="form-success hidden" id="form-success">
+                        <i class="fas fa-check-circle"></i> Thank you! Your message has been sent successfully.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 AGATHEESH C. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="https://github.com/yourusername" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/yourusername" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:your.email@example.com">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
 </body>
 </html>
